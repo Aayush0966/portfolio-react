@@ -1,9 +1,11 @@
 import React from 'react';
+import Certificate from './components/common/Certificate';
+import CertificateSection from './components/certificateSection/CertificateSection';
 
 function App() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <button className="btn btn-primary">Click Me</button>
+    <div className="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-black">
+      <CertificateSection />
     </div>
   );
 }
