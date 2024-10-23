@@ -2,6 +2,7 @@ import React from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Sparkles, Stars, Code, Terminal, Rocket, Briefcase, Book, Gamepad, Camera, Music, Globe, CodeIcon } from 'lucide-react'; // Import relevant icons for hobbies
+import SectionHeader from "../common/SectionHeader";
 
 const AboutMe = () => {
   const controls = useAnimation();
@@ -49,17 +50,10 @@ const AboutMe = () => {
     },
   };
 
-  const headerVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: { duration: 0.8, ease: "easeInOut" }
-    }
-  };
 
   return (
     <motion.div
+      id='about'
       ref={ref}
       className="min-h-screen bg-gradient-to-tr from-gray-900 via-gray-900 to-gray-800 flex items-center p-4 sm:p-6 md:p-8 lg:p-12 relative overflow-hidden"
       initial="hidden"
@@ -81,32 +75,7 @@ const AboutMe = () => {
 
       <div className="max-w-screen-2xl mx-auto relative z-10">
         <motion.div variants={itemVariants} className="text-center mb-16">
-        <motion.div 
-        className="flex justify-center items-center gap-4 mb-10"
-        variants={headerVariants}
-        initial="hidden"
-        animate="visible"
-      >
-        <motion.div
-          className="relative w-10 h-10 flex justify-center items-center bg-blue-400/10 rounded-full shadow-lg"
-          whileHover={{ rotate: [0, 360], scale: 1.2 }}
-          transition={{ duration: 1, repeat: Infinity, repeatType: "reverse" }}
-        >
-          <Stars className="w-8 h-8 text-blue-400" />
-        </motion.div>
-        <h2 className="text-5xl font-bold bg-gradient-to-r from-blue-400 via-emerald-500 to-blue-500 bg-clip-text text-transparent animate-pulse">
-          About me
-        </h2>
-        <motion.div
-          className="relative w-10 h-10 flex justify-center items-center bg-emerald-400/10 rounded-full shadow-lg"
-          whileHover={{ rotate: [0, 360], scale: 1.2 }}
-          transition={{ duration: 1, repeat: Infinity, repeatType: "reverse" }}
-        >
-          <Stars className="w-8 h-8 text-emerald-400" />
-        </motion.div>
-      </motion.div>
-
-          
+        <SectionHeader title="About me" />
         </motion.div>
 
         <motion.div

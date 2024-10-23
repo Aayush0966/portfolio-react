@@ -74,10 +74,16 @@ function DetailsSection({itemVariants }) {
     <div className="space-y-6 md:space-y-8 w-full lg:w-3/5">
     {/* Social Icons */}
     <motion.div className="flex gap-4 md:gap-6 text-gray-400 justify-center lg:justify-start">
-      {[Github, Linkedin, Mail].map((Icon, index) => (
+      {[
+        { Icon: Github, url: 'https://github.com/Aayush0966' },
+        { Icon: Linkedin, url: 'https://www.linkedin.com/in/aayush-budhathoki-102954332' },
+        { Icon: Mail, url: 'mailto:aayushx699@gmail.com' },
+      ].map(({ Icon, url }, index) => (
         <motion.a
           key={index}
-          href="#"
+          href={url}
+          target="_blank" // Opens the link in a new tab
+          rel="noopener noreferrer" // Security best practice
           className="text-gray-400 hover:text-blue-400"
           variants={socialIconVariants}
           whileHover="hover"
@@ -86,6 +92,7 @@ function DetailsSection({itemVariants }) {
         </motion.a>
       ))}
     </motion.div>
+
 
     <motion.div className="space-y-4 md:space-y-6 lg:space-y-8 text-center lg:text-left">
       <motion.div 
@@ -159,7 +166,7 @@ function DetailsSection({itemVariants }) {
         </motion.a>
         
         <motion.a
-          href="#projects"
+          href="#portfolio"
           className="group px-6 md:px-8 py-3 md:py-4 lg:py-5 rounded-xl text-gray-300 border border-gray-700
             flex items-center justify-center gap-3 text-lg md:text-xl lg:text-2xl" 
           variants={buttonVariants}

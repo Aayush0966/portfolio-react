@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { CodeSquare, Filter } from 'lucide-react';
 import ProjectCard from './ProjectCard';
+import SectionHeader from "../common/SectionHeader";
 
 const PortfolioSection = () => {
     const sectionRef = useRef(null);
@@ -99,6 +100,7 @@ const PortfolioSection = () => {
 
     return (
         <motion.section
+           id='portfolio'
             ref={sectionRef}
             className="min-h-screen bg-gradient-to-tr from-gray-900 via-gray-900 to-gray-800 flex flex-col justify-center items-center  py-20 px-6 relative overflow-hidden"
             variants={containerVariants}
@@ -119,21 +121,7 @@ const PortfolioSection = () => {
             />
 
             {/* Section Header */}
-            <motion.div 
-                className="flex items-center gap-6 mb-16"
-                variants={itemVariants}
-            >
-                <motion.div
-                    className="w-12 h-12 flex justify-center items-center bg-blue-400/10 rounded-full"
-                    whileHover={{ rotate: 360 }}
-                    transition={{ duration: 1 }}
-                >
-                    <CodeSquare className="w-6 h-6 text-blue-400" />
-                </motion.div>
-                <h2 className="text-5xl font-bold bg-gradient-to-r from-blue-400 via-emerald-500 to-blue-500 bg-clip-text text-transparent">
-                    Featured Projects
-                </h2>
-            </motion.div>
+           <SectionHeader title="Featured Projects" />
 
             {/* Category Filters */}
             <motion.div 

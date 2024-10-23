@@ -44,6 +44,7 @@ function HeroSection() {
 
   return (
     <motion.div
+      id='home'
       className="min-h-screen  bg-gradient-to-br from-gray-900 via-gray-900 to-gray-800 flex items-center p-4 sm:p-6 md:p-8 lg:p-12 relative overflow-hidden"
       initial="hidden"
       animate="visible"
