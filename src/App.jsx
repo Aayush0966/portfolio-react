@@ -1,12 +1,30 @@
 import React from 'react';
-import Certificate from './components/common/Certificate';
-import CertificateSection from './components/certificateSection/CertificateSection';
+import { useAnimation } from 'framer-motion';
+import Header from './components/header/Header';
+import HeroSection from './components/HeroSection/HeroSection';
+import AboutMe from './components/aboutSection/AboutMe';
+import SkillsSection from './components/Skills/Skills'
+import PortfolioSection from './components/portfolioSection/PortfolioSection';
 
 function App() {
+
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-black">
-      <CertificateSection />
-    </div>
+    <>
+      {/* Header remains static */}
+      <Header />
+
+      {/* HeroSection visible on load */}
+      <HeroSection />
+
+      {/* AboutMe section triggers its own internal animations */}
+      <AboutMe />
+
+      <SkillsSection />
+
+      <PortfolioSection />
+
+    </>
   );
 }
 

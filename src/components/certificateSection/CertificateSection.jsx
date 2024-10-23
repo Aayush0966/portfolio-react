@@ -4,8 +4,8 @@ import Certificate from '../common/Certificate';
 
 function CertificateSection() {
   return (
-    <div className="relative w-full text-center">
-<div className="relative">
+    <div className="m-20 w-full text-center">
+<div className="">
   <h2 className="opacity-40 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-black dark:text-gray-200 ">
     Certificates
   </h2>
@@ -15,7 +15,7 @@ function CertificateSection() {
 </div>
 
 
-      <div className=" gap-6 mt-8">
+      <div className="ml-5 gap-6 mt-8">
         {certificates.map((certificate) => (
           <Certificate key={certificate.id} certificate={certificate} />
         ))}
