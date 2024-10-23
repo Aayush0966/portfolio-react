@@ -37,19 +37,21 @@ const ProjectCard = ({ project }) => {
     // A function to map technology names to their corresponding icon paths
     const getTechIcon = (tech) => {
         const iconMap = {
-            react: 'react.png',
-            tailwindcss: 'tailwindcss.png',
-            nodejs: 'nodejs.png',
-            mongodb: 'mongodb.png',
-            express: 'express.png',
-            jwt: 'jwt.png',
-            vite: 'vite.png',
-            cloudinary: 'cloudinary.png',
-            daisyui: 'daisyUI.png'
+            react: 'icons/react.png',
+            tailwindcss: 'icons/tailwindcss.png',
+            nodejs: 'icons/nodejs.png',
+            mongodb: 'icons/mongodb.png',
+            express: 'icons/express.png',
+            jwt: 'icons/jwt.png',
+            vite: 'icons/vite.png',
+            cloudinary: 'icons/cloudinary.png',
+            daisyui: 'icons/daisyUI.png'
         };
-
-        return `/src/assets/icons/${iconMap[tech.toLowerCase().replace(" ", "").replace(".", "")]}` || null;
+    
+        return iconMap[tech.toLowerCase().replace(" ", "").replace(".", "")] || null;
     };
+    
+    
 
     return (
         <motion.div

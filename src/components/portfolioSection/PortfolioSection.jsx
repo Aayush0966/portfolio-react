@@ -3,6 +3,9 @@ import { motion, useInView } from 'framer-motion';
 import { CodeSquare, Filter } from 'lucide-react';
 import ProjectCard from './ProjectCard';
 import SectionHeader from "../common/SectionHeader";
+import streamingSiteImage from '/src/assets/streamingSite.png';
+import weatherAppImage from '/src/assets/weatherApp.png';
+import contactManagerImage from '/src/assets/contactManager.png';
 
 const PortfolioSection = () => {
     const sectionRef = useRef(null);
@@ -15,7 +18,7 @@ const PortfolioSection = () => {
             "title": "Streaming Site",
             "description": "Modern, responsive movie and TV watching website frontend built with React and styled using Tailwind CSS.",
             "technologies": ["React", "Tailwind CSS", "Vite"],
-            "image": "/src/assets/streamingSite.png",
+            "image": streamingSiteImage,
             "liveLink": "https://moviesworld69.netlify.app/",
             "githubLink": "https://github.com/Aayush0966/Streaming-Site-Frontend",
             "category": "Frontend",
@@ -24,13 +27,12 @@ const PortfolioSection = () => {
                 "Dynamic content fetching from TMDb API",
                 "User-friendly navigation through movie details"
             ]
-        }
-        ,
+        },
         {
             "title": "Weather Dashboard 🌧️",
             "description": "Welcome to the Weather Dashboard! This application provides comprehensive weather data.",
-            "technologies": ["React", "Tailwind CSS" , "Vite"],
-            "image": "/src/assets/weatherApp.png",
+            "technologies": ["React", "Tailwind CSS", "Vite"],
+            "image": weatherAppImage,
             "liveLink": "https://aayush0966.github.io/React-Weather-Dashboard/",
             "githubLink": "https://github.com/Aayush0966/React-Weather-Dashboard",
             "category": "Frontend",
@@ -39,13 +41,12 @@ const PortfolioSection = () => {
                 "Stay informed with weather data updated every 3 hours.",
                 "Key weather metrics, such as humidity, wind speed, and rain probability"
             ]
-        }
-        ,
+        },
         {
             "title": "Contact Manager Dashboard 📇",
             "description": "A full-stack web application for efficient contact management, featuring a sleek React frontend and a powerful Node.js backend.",
             "technologies": ["React", "Node.js", "MongoDB", "Express", "JWT", "Cloudinary", "Tailwind CSS", "DaisyUI", "Vite"],
-            "image": "/src/assets/contactManager.png",
+            "image": contactManagerImage,
             "liveLink": "https://contactnest.netlify.app/",
             "githubLink": "https://github.com/Aayush0966/Contact-Manager-Dashboard",
             "category": "Full Stack",
@@ -55,8 +56,9 @@ const PortfolioSection = () => {
                 "Contact image upload and management using Multer and Cloudinary",
             ]
         }
-        
     ];
+    
+    
 
     const categories = ['All', ...new Set(projects.map(project => project.category))];
 
