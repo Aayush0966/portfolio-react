@@ -5,10 +5,10 @@ const CertificateCard = ({ certificate }) => {
   return (
     <motion.div
       whileHover={{ y: -4 }}
-      className="w-full max-w-3xl bg-gray-500 dark:bg-gray-900 rounded-lg shadow-lg border border-gray-200 dark:border-gray-800"
+      className="w-full max-w-3xl bg-gray-900 rounded-lg shadow-lg border border-gray-800"
     >
       {/* Header - Increased padding and logo size */}
-      <div className="p-8 border-b border-gray-200 dark:border-gray-800">
+      <div className="p-8 border-b border-gray-800">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-6">
             <img 
@@ -17,14 +17,14 @@ const CertificateCard = ({ certificate }) => {
               className="w-16 h-16 rounded-lg object-cover" // Increased logo size
             />
             <div>
-              <h4 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
+              <h4 className="text-xl font-semibold text-gray-100">
                 {certificate.platform}
               </h4>
               <div className="flex items-center gap-3 mt-2">
-                <span className="px-3 py-1.5 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-sm font-medium rounded">
+                <span className="px-3 py-1.5 bg-green-900/30 text-green-400 text-sm font-medium rounded">
                   Verified
                 </span>
-                <span className="text-base text-gray-600 dark:text-gray-400">
+                <span className="text-base text-gray-400">
                   Professional Certificate
                 </span>
               </div>
@@ -32,7 +32,7 @@ const CertificateCard = ({ certificate }) => {
           </div>
           
           {/* Issue Date - Increased text size */}
-          <div className="text-right text-base text-gray-600 dark:text-gray-400">
+          <div className="text-right text-base text-gray-400">
             {certificate.issueDate}
           </div>
         </div>
@@ -40,21 +40,21 @@ const CertificateCard = ({ certificate }) => {
 
       {/* Content - Increased padding and spacing */}
       <div className="p-8">
-        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+        <h3 className="text-2xl font-bold text-white mb-6">
           {certificate.title}
         </h3>
 
         {/* Skills Section - Increased spacing */}
         {certificate.skills && (
           <div className="mb-8">
-            <h5 className="text-base font-medium text-gray-700 dark:text-gray-300 mb-3">
+            <h5 className="text-base font-medium text-gray-300 mb-3">
               Skills Verified
             </h5>
             <div className="flex flex-wrap gap-3">
               {certificate.skills.map((skill, index) => (
                 <span 
                   key={index}
-                  className="px-4 py-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-base rounded-full"
+                  className="px-4 py-2 bg-gray-800 text-gray-300 text-base rounded-full"
                 >
                   {skill}
                 </span>
@@ -67,12 +67,12 @@ const CertificateCard = ({ certificate }) => {
           href={certificate.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-between p-6 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-gray-600 dark:hover:bg-gray-750 transition-colors"
+          className="flex items-center justify-between p-6 bg-gray-800 rounded-lg hover:bg-gray-750 transition-colors"
           whileHover={{ x: 4 }}
         >
           <div className="flex items-center gap-4">
             <svg 
-              className="w-6 h-6 text-blue-600 dark:text-blue-400" 
+              className="w-6 h-6 text-blue-400" 
               fill="none" 
               viewBox="0 0 24 24" 
               stroke="currentColor"
@@ -85,10 +85,10 @@ const CertificateCard = ({ certificate }) => {
               />
             </svg>
             <div>
-              <span className="block text-base font-medium text-gray-900 dark:text-white">
+              <span className="block text-base font-medium text-white">
                 Verify Certificate
               </span>
-              <span className="text-sm text-gray-600 dark:text-gray-400">
+              <span className="text-sm text-gray-400">
                 View credential
               </span>
             </div>

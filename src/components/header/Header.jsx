@@ -31,7 +31,7 @@ function Header() {
     <header
       className={`fixed w-full z-50 transition-all duration-300 `}
     >
-        <div className={`flex p-6 justify-between items-center ${hasScrolled ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-lg' : 'bg-transparent'}
+        <div className={`flex p-6 justify-between items-center ${hasScrolled ? 'bg-gray-900/90 backdrop-blur-md shadow-lg' : 'bg-transparent'}
 `}>
           {/* Logo/Brand */}
           <div className="flex-shrink-0 flex items-center">
@@ -51,7 +51,7 @@ function Header() {
                       e.preventDefault();
                       handleSmoothScroll(item.toLowerCase());
                     }}
-                    className="px-3 py-2 font-poppins text-xl rounded-md transition-all duration-300 relative group flex items-center gap-2 hover:text-green-500 dark:hover:text-green-400"
+                    className="px-3 py-2 font-poppins text-gray-400 text-xl rounded-md transition-all duration-300 relative group flex items-center gap-2 hover:text-green-400"
                   >
                     {item}
                     <span className="absolute left-0 -bottom-1 h-0.5 bg-green-500 transition-all duration-300 transform origin-left group-hover:w-full w-0" />
@@ -65,7 +65,7 @@ function Header() {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 dark:text-gray-200 hover:text-green-500 dark:hover:text-green-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-green-500 transition-all duration-200"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-200 hover:text-green-400 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-green-500 transition-all duration-200"
             >
               {isMenuOpen ? <X className="h-6 w-6" aria-hidden="true" /> : <Menu className="h-6 w-6" aria-hidden="true" />}
             </button>
@@ -80,7 +80,7 @@ function Header() {
             isMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'
           }`}
         >
-          <div className="px-2 pt-2 pb-3 space-y-1 mt-2 bg-white/90 dark:bg-gray-800/90 backdrop-blur-md rounded-lg shadow-lg">
+          <div className="px-2 pt-2 pb-3 space-y-1 mt-2 bg-gray-800/90 backdrop-blur-md rounded-lg shadow-lg">
             {navItems.map((item) => (
               <a
                 key={item}
