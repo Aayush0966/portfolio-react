@@ -1,15 +1,16 @@
-import React, { useRef } from 'react';
-import { motion } from 'framer-motion';
-import { Send, Mail, Phone, MapPin } from 'lucide-react';
+import React, { useRef, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Send, Mail, Phone, MapPin, CheckCircle, XCircle  } from 'lucide-react';
 import emailjs from 'emailjs-com';
 import SectionHeader from '../common/SectionHeader';
 
 const ContactMe = () => {
   const formRef = useRef();
+  const [alert, setAlert] = useState(null); // State for the alert message
 
   const sendEmail = (e) => {
     e.preventDefault();
-  
+
     emailjs.sendForm(
       import.meta.env.VITE_EMAILJS_SERVICE_ID,
       import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
@@ -17,13 +18,22 @@ const ContactMe = () => {
       import.meta.env.VITE_EMAILJS_USER_ID
     )
     .then((result) => {
-        console.log(result.text);
-        alert("Message sent successfully!");
+        formRef.current.reset(); // Reset form
+        setAlert({ type: "success", message: "Message sent successfully!" });
     }, (error) => {
-        console.log(error.text);
-        alert("Failed to send message, please try again.");
+        setAlert({ type: "error", message: "Failed to send message, please try again." });
     });
+
+    // Hide the alert after 3 seconds
+    setTimeout(() => setAlert(null), 3000);
   };
+
+  const alertVariants = {
+    hidden: { opacity: 0, y: -20 },
+    visible: { opacity: 1, y: 0 },
+    exit: { opacity: 0, y: -20 }
+  };
+
   
 
   const containerVariants = {
@@ -181,6 +191,26 @@ const ContactMe = () => {
             </div>
           </div>
         </motion.div>
+        <AnimatePresence>
+          {alert && (
+            <motion.div
+              className={`fixed bottom-5 left-1/2 transform -translate-x-1/2 px-6 py-3 rounded-lg shadow-lg ${
+                alert.type === "success" ? "bg-emerald-600" : "bg-red-600"
+              } flex items-center gap-2 text-white`}
+              variants={alertVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+            >
+              {alert.type === "success" ? (
+                <CheckCircle className="w-5 h-5" />
+              ) : (
+                <XCircle className="w-5 h-5" />
+              )}
+              <span>{alert.message}</span>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </motion.div>
     </div>
   );
