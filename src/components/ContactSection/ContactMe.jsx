@@ -74,7 +74,7 @@ const ContactMe = () => {
   };
 
   return (
-    <div id="contact" className="min-h-screen bg-gradient-to-tr from-gray-900 via-gray-800 to-gray-700 text-white py-20 px-4 relative overflow-hidden">
+    <div id="contact" className="min-h-screen bg-gradient-to-tr from-gray-900 via-gray-900 to-gray-800 text-white py-20 px-4 relative overflow-hidden">
       <motion.div
         className="absolute w-96 sm:w-[600px] h-96 sm:h-[600px] -top-48 sm:-top-64 -right-48 sm:-right-64 bg-emerald-500/20 rounded-full blur-3xl"
         variants={glowVariants}

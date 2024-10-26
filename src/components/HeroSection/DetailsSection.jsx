@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { motion } from 'framer-motion';
 import { Download, ExternalLink, Github, Linkedin, Mail } from 'lucide-react';
+import resume from "/src/assets/Aayush.pdf"
 
 function DetailsSection({itemVariants }) {
   const [displayText, setDisplayText] = useState('');
@@ -142,29 +143,26 @@ function DetailsSection({itemVariants }) {
         variants={itemVariants}
       >
         <motion.a
-          href="/cv.pdf"
-          download
+          href={resume}
+          download="Aayush_Budhathoki_Resume.pdf"
           className="group px-6 md:px-8 py-3 md:py-4 lg:py-5 bg-gradient-to-r from-blue-500 to-emerald-500 rounded-xl 
             flex items-center justify-center gap-3 text-white font-medium text-lg md:text-xl lg:text-2xl" 
           variants={buttonVariants}
           whileHover="hover"
           whileTap="tap"
         >
-          Download CV
+          Download Resume
           <motion.span
             animate={{
               y: [0, -4, 0],
             }}
             transition={{
               duration: 1.5,
-              repeat: Infinity,
-              repeatType: "loop"
             }}
           >
-            <Download className="w-5 h-5 md:w-6 md:h-6" />
+            <Download className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10" />
           </motion.span>
         </motion.a>
-        
         <motion.a
           href="#portfolio"
           className="group px-6 md:px-8 py-3 md:py-4 lg:py-5 rounded-xl text-gray-300 border border-gray-700
