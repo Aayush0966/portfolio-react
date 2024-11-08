@@ -45,7 +45,9 @@ const ProjectCard = ({ project }) => {
             jwt: 'icons/jwt.png',
             vite: 'icons/vite.png',
             cloudinary: 'icons/cloudinary.png',
-            daisyui: 'icons/daisyUI.png'
+            daisyui: 'icons/daisyUI.png',
+            nextjs: 'icons/nextjs.jpg',
+            nextauth: 'icons/next-auth.png'
         };
     
         return iconMap[tech.toLowerCase().replace(" ", "").replace(".", "")] || null;

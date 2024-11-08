@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { CodeSquare, Filter } from 'lucide-react';
+import { Filter } from 'lucide-react';
+import primeCvImage from '/src/assets/primeCv.png';
 import ProjectCard from './ProjectCard';
 import SectionHeader from "../common/SectionHeader";
 import streamingSiteImage from '/src/assets/streamingSite.png';
@@ -14,6 +15,21 @@ const PortfolioSection = () => {
 
     // Sample projects - replace with your actual projects
     const projects = [
+        {
+            "title": "PRIME CV",
+            "description": "A modern, responsive resume builder website built with Next.js and styled using Tailwind CSS.",
+            "technologies": ["Next.js", "Tailwind CSS", "MongoDB", "nextauth"],
+            "image": primeCvImage,
+            "liveLink": "https://primecv.netlify.app/",
+            "githubLink": "https://github.com/Aayush0966/CV-Builder",
+            "category": "Full Stack",
+            "features": [
+                "Secure authentication flow with Next-Auth",
+                "Comprehensive resume CRUD operations",
+                "Template-based resume generation",
+                "Responsive design across various devices"
+            ]
+        },
         {
             "title": "Streaming Site",
             "description": "Modern, responsive movie and TV watching website frontend built with React and styled using Tailwind CSS.",
@@ -45,7 +61,7 @@ const PortfolioSection = () => {
         {
             "title": "Contact Manager Dashboard 📇",
             "description": "A full-stack web application for efficient contact management, featuring a sleek React frontend and a powerful Node.js backend.",
-            "technologies": ["React", "Node.js", "MongoDB", "Express", "JWT", "Cloudinary", "Tailwind CSS", "DaisyUI", "Vite"],
+            "technologies": ["React", "Node.js", "MongoDB", "JWT", "Tailwind CSS", "Vite"],
             "image": contactManagerImage,
             "liveLink": "https://contactnest.netlify.app/",
             "githubLink": "https://github.com/Aayush0966/Contact-Manager-Dashboard",
@@ -56,6 +72,7 @@ const PortfolioSection = () => {
                 "Contact image upload and management using Multer and Cloudinary",
             ]
         }
+       
     ];
     
     
