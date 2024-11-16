@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Filter } from 'lucide-react';
 import primeCvImage from '/src/assets/primeCv.png';
+import choiceHubImage from '/src/assets/choicehub.png';
 import ProjectCard from './ProjectCard';
 import SectionHeader from "../common/SectionHeader";
 import streamingSiteImage from '/src/assets/streamingSite.png';
@@ -71,10 +72,22 @@ const PortfolioSection = () => {
                 "Comprehensive contact CRUD operations",
                 "Contact image upload and management using Multer and Cloudinary",
             ]
+        },
+        {
+            "title": "Choice Hub",
+            "description": "A web application for making decisions easier by providing a platform for users to create and share polls.",
+            "technologies": ["Next.js", "firebase", "Tailwind CSS"],
+            "image": choiceHubImage,
+            "liveLink": "https://choicehub.vercel.app/",
+            "githubLink": "https://github.com/Aayush0966/choice-hub",
+            "category": "Full Stack",
+            "features": [
+                "Create and share polls with friends and family",
+                "Vote on polls and see real-time results",
+                "Ensures smooth user experience"
+            ]
         }
-       
     ];
-    
     
 
     const categories = ['All', ...new Set(projects.map(project => project.category))];
