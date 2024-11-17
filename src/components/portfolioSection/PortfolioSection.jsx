@@ -36,7 +36,7 @@ const PortfolioSection = () => {
             "description": "Modern, responsive movie and TV watching website frontend built with React and styled using Tailwind CSS.",
             "technologies": ["React", "Tailwind CSS", "Vite"],
             "image": streamingSiteImage,
-            "liveLink": "https://moviesworld69.netlify.app/",
+            "liveLink": "https://streamingwebsite.netlify.app/",
             "githubLink": "https://github.com/Aayush0966/Streaming-Site-Frontend",
             "category": "Frontend",
             "features": [
@@ -157,7 +157,7 @@ const PortfolioSection = () => {
 
             {/* Category Filters */}
             <motion.div 
-                className="w-full max-w-7xl mb-12"
+                className="w-full max-w-7xl mb-12 px-8"
                 variants={itemVariants}
             >
                 <div className="flex flex-wrap gap-3 items-center">
@@ -185,20 +185,36 @@ const PortfolioSection = () => {
                 </div>
             </motion.div>
 
-            {/* Projects Grid */}
+            {/* Projects Horizontal Scroll Container */}
             <motion.div 
-                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-7xl"
-                variants={containerVariants}
+                className="w-full overflow-x-auto scrollbar-hide"
             >
-                {filteredProjects.map((project, index) => (
-                    <motion.div
-                        key={index}
-                        variants={itemVariants}
-                    >
-                        <ProjectCard project={project} />
-                    </motion.div>
-                ))}
+                <motion.div 
+                    className="flex gap-8 pl-16 pb-8 min-w-max"
+                    variants={containerVariants}
+                >
+                    {/* Left Spacer */}
+                    <div className="w-8 flex-shrink-0" />
+
+                    {filteredProjects.map((project, index) => (
+                        <motion.div
+                            key={index}
+                            variants={itemVariants}
+                            className="w-[400px] flex-shrink-0"
+                        >
+                            <ProjectCard project={project} />
+                        </motion.div>
+                    ))}
+
+                    {/* Right Spacer */}
+                    <div className="w-8 flex-shrink-0" />
+                </motion.div>
             </motion.div>
+
+            {/* Optional: Add scroll indicators */}
+            <div className="absolute right-4 bottom-4 text-gray-400 text-sm">
+                <span>Scroll →</span>
+            </div>
         </motion.section>
     );
 };
