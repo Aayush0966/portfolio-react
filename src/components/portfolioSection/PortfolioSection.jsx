@@ -21,7 +21,7 @@ const PortfolioSection = () => {
             "description": "A modern, responsive resume builder website built with Next.js and styled using Tailwind CSS.",
             "technologies": ["Next.js", "Tailwind CSS", "MongoDB", "nextauth"],
             "image": primeCvImage,
-            "liveLink": "https://primecv.netlify.app/",
+            "liveLink": "https://primecv.vercel.app/",
             "githubLink": "https://github.com/Aayush0966/CV-Builder",
             "category": "Full Stack",
             "features": [
