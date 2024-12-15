@@ -205,7 +205,7 @@ const Footer = () => {
             <motion.div className="inline-flex flex-col items-center md:items-end gap-2">
               {[
                 { label: "Latest Projects", href: "#portfolio" },
-                { label: "View Resume", href: "#" },
+                { label: "View Resume", href: "https://drive.google.com/file/d/11XTBjV3euCusWY1zdfTdffCn4YVqSyLC/view?usp=sharing" },
                 { label: "Get in Touch", href: "#contact" }
               ].map((link) => (
                 <motion.a

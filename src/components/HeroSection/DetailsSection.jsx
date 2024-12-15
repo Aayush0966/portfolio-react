@@ -142,7 +142,7 @@ function DetailsSection({itemVariants }) {
         variants={itemVariants}
       >
         <motion.a
-          href="https://drive.google.com/file/d/1WYk2qqBSecQT6-tT_rq3QkpceX0VQdCg/view?usp=sharing"
+          href="https://drive.google.com/file/d/11XTBjV3euCusWY1zdfTdffCn4YVqSyLC/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
           className="group px-6 md:px-8 py-3 md:py-4 lg:py-5 bg-gradient-to-r from-blue-500 to-emerald-500 rounded-xl 
