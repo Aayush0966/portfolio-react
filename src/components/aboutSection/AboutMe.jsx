@@ -103,7 +103,7 @@ const AboutMe = () => {
 
             <div className="space-y-8">
               <motion.p variants={itemVariants} className="text-xl text-gray-300 leading-relaxed">
-                Hey there! I’m Aayush, a creative developer currently diving deep into web development with the MERN stack. 
+                Hey there! I’m Aayush, a creative developer currently diving deep into web development. 
                 My journey in tech is fueled by curiosity and a passion for building things that not only work but also look amazing. 
                 I’m all about creating digital experiences that blend 
                 aesthetic beauty with technical excellence.
@@ -113,14 +113,14 @@ const AboutMe = () => {
                 <motion.div className="flex items-center gap-4">
                   <Code className="w-8 h-8 text-emerald-400" />
                   <p className="text-gray-400 leading-relaxed">
-                    <strong>Technologies:</strong> React, Node.js, JavaScript, Tailwind CSS, and daisyUI. Always exploring more!
+                    <strong>Technologies:</strong> React, Next.js, Node.js, JavaScript, Tailwind CSS, and Prisma ORM. Always exploring more!
                   </p>
                 </motion.div>
 
                 <motion.div className="flex items-center gap-4">
                   <Terminal className="w-8 h-8 text-blue-400" />
                   <p className="text-gray-400 leading-relaxed">
-                    <strong>Stack Focus:</strong> MERN stack, building full-stack apps with a creative twist.
+                    <strong>Stack Focus:</strong> Next.js, building full-stack apps with a creative twist.
                   </p>
                 </motion.div>
 
@@ -134,7 +134,7 @@ const AboutMe = () => {
                 <motion.div className="flex items-center gap-4">
                   <Briefcase className="w-8 h-8 text-indigo-400" />
                   <p className="text-gray-400 leading-relaxed">
-                  <strong>Current Learning Path:</strong> Mastering the MERN stack to build dynamic and scalable applications.
+                  <strong>Current Learning Path:</strong> Mastering the Next.js framework to build dynamic and scalable applications.
                   </p>
                 </motion.div>
               </motion.div>

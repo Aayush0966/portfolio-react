@@ -89,7 +89,7 @@ const ContactMe = () => {
       />
 
       <motion.div 
-        className="max-w-4xl mx-auto relative z-10"
+        className="max-w-6xl mx-auto relative z-10" // Changed from max-w-5xl to max-w-6xl
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
@@ -110,9 +110,9 @@ const ContactMe = () => {
           variants={itemVariants}
         >
           <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-purple-500/5 rounded-2xl" />
-          <div className="relative p-8 md:p-12">
-            <div className="grid md:grid-cols-3 gap-12">
-              <div className="space-y-6 md:col-span-1">
+          <div className="relative p-12 md:p-16"> {/* Increased padding */}
+            <div className="grid md:grid-cols-3 gap-16"> {/* Increased gap */}
+              <div className="space-y-8 md:col-span-1">
                 {[
                   { icon: Mail, text: "aayushx699@gmail.com", label: "Email" },
                   { icon: Phone, text: "", label: "Phone" },
@@ -124,15 +124,15 @@ const ContactMe = () => {
                     className="group"
                   >
                     <motion.div 
-                      className="flex items-center gap-4 p-4 rounded-xl bg-gray-800/40 hover:bg-gray-800/60 border border-gray-700/50 hover:border-emerald-500/50 transition-all duration-300"
+                      className="flex items-center gap-6 p-6 rounded-xl bg-gray-800/40 hover:bg-gray-800/60 border border-gray-700/50 hover:border-emerald-500/50 transition-all duration-300"
                       whileHover={{ scale: 1.02, transition: { type: "spring", stiffness: 300 } }}
                     >
-                      <div className="p-3 rounded-lg bg-gray-900/60 group-hover:bg-gray-900/80 transition-all">
-                        <item.icon className="w-5 h-5 text-emerald-400 group-hover:text-emerald-300 transition-colors" />
+                      <div className="p-2 rounded-lg bg-gray-900/60 group-hover:bg-gray-900/80 transition-all">
+                        <item.icon className="w-6 h-6 text-emerald-400 group-hover:text-emerald-300 transition-colors" />
                       </div>
                       <div className="overflow-hidden">
                         <p className="text-sm text-gray-400 group-hover:text-gray-300">{item.label}</p>
-                        <p className="text-sm font-medium break-words max-w-xs">{item.text}</p>
+                        <p className="text-sm font-medium break-words">{item.text}</p>
                       </div>
                     </motion.div>
                   </motion.div>
@@ -143,10 +143,10 @@ const ContactMe = () => {
               <motion.form 
                 ref={formRef}
                 onSubmit={sendEmail}
-                className="space-y-6 md:col-span-2"
+                className="space-y-8 md:col-span-2"
                 variants={itemVariants}
               >
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid md:grid-cols-2 gap-8">
                   <motion.div variants={itemVariants}>
                     <input 
                       type="text" 

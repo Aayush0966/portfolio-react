@@ -55,7 +55,7 @@ const Footer = () => {
 
   const socialLinks = [
     { icon: Github, href: "https://github.com/Aayush0966", label: "Github" },
-    { icon: Linkedin, href: "www.linkedin.com/in/aayush-budhathoki-102954332", label: "LinkedIn" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/aayush-budhathoki-102954332", label: "LinkedIn" },
     { icon: Mail, href: "aayushx699@gmail.com", label: "Email" }
   ];
 
@@ -174,6 +174,8 @@ const Footer = () => {
                 href={social.href}
                 className="group relative"
                 initial="rest"
+                rel="noopener noreferrer" 
+                target="noopener"
                 whileHover="hover"
                 whileTap="tap"
                 variants={iconAnimation}

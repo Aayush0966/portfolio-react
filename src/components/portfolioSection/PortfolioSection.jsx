@@ -1,94 +1,15 @@
 import React, { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Filter } from 'lucide-react';
-import primeCvImage from '/src/assets/primeCv.png';
-import choiceHubImage from '/src/assets/choicehub.png';
 import ProjectCard from './ProjectCard';
 import SectionHeader from "../common/SectionHeader";
-import streamingSiteImage from '/src/assets/streamingSite.png';
-import weatherAppImage from '/src/assets/weatherApp.png';
-import contactManagerImage from '/src/assets/contactManager.png';
-
+import portfolioData from '../../../userData';
 const PortfolioSection = () => {
     const sectionRef = useRef(null);
     const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
     const [selectedCategory, setSelectedCategory] = useState('All');
 
-    // Sample projects - replace with your actual projects
-    const projects = [
-        {
-            "title": "PRIME CV",
-            "description": "A modern, responsive resume builder website built with Next.js and styled using Tailwind CSS.",
-            "technologies": ["Next.js", "Tailwind CSS", "MongoDB", "nextauth"],
-            "image": primeCvImage,
-            "liveLink": "https://primecv.vercel.app/",
-            "githubLink": "https://github.com/Aayush0966/CV-Builder",
-            "category": "Full Stack",
-            "features": [
-                "Secure authentication flow with Next-Auth",
-                "Comprehensive resume CRUD operations",
-                "Template-based resume generation",
-                "Responsive design across various devices"
-            ]
-        },
-        {
-            "title": "Streaming Site",
-            "description": "Modern, responsive movie and TV watching website frontend built with React and styled using Tailwind CSS.",
-            "technologies": ["React", "Tailwind CSS", "Vite"],
-            "image": streamingSiteImage,
-            "liveLink": "https://streamingwebsite.netlify.app/",
-            "githubLink": "https://github.com/Aayush0966/Streaming-Site-Frontend",
-            "category": "Frontend",
-            "features": [
-                "Responsive design across various devices",
-                "Dynamic content fetching from TMDb API",
-                "User-friendly navigation through movie details"
-            ]
-        },
-        {
-            "title": "Weather Dashboard 🌧️",
-            "description": "Welcome to the Weather Dashboard! This application provides comprehensive weather data.",
-            "technologies": ["React", "Tailwind CSS", "Vite"],
-            "image": weatherAppImage,
-            "liveLink": "https://aayush0966.github.io/React-Weather-Dashboard/",
-            "githubLink": "https://github.com/Aayush0966/React-Weather-Dashboard",
-            "category": "Frontend",
-            "features": [
-                "Get a complete overview of the weather for the entire week.",
-                "Stay informed with weather data updated every 3 hours.",
-                "Key weather metrics, such as humidity, wind speed, and rain probability"
-            ]
-        },
-        {
-            "title": "Contact Manager Dashboard 📇",
-            "description": "A full-stack web application for efficient contact management, featuring a sleek React frontend and a powerful Node.js backend.",
-            "technologies": ["React", "Node.js", "MongoDB", "JWT", "Tailwind CSS", "Vite"],
-            "image": contactManagerImage,
-            "liveLink": "https://contactnest.netlify.app/",
-            "githubLink": "https://github.com/Aayush0966/Contact-Manager-Dashboard",
-            "category": "Full Stack",
-            "features": [
-                "Secure user authentication (Email/Password & Google Sign-In)",
-                "Comprehensive contact CRUD operations",
-                "Contact image upload and management using Multer and Cloudinary",
-            ]
-        },
-        {
-            "title": "Choice Hub",
-            "description": "A web application for making decisions easier by providing a platform for users to create and share polls.",
-            "technologies": ["Next.js", "firebase", "Tailwind CSS"],
-            "image": choiceHubImage,
-            "liveLink": "https://choicehub.vercel.app/",
-            "githubLink": "https://github.com/Aayush0966/choice-hub",
-            "category": "Full Stack",
-            "features": [
-                "Create and share polls with friends and family",
-                "Vote on polls and see real-time results",
-                "Ensures smooth user experience"
-            ]
-        }
-    ];
-    
+    const projects = portfolioData.projects;
 
     const categories = ['All', ...new Set(projects.map(project => project.category))];
 

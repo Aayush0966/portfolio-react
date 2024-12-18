@@ -1,29 +1,23 @@
 import React, {useState, useEffect} from 'react'
 import { motion } from 'framer-motion';
 import { Download, ExternalLink, Github, Linkedin, Mail } from 'lucide-react';
+import portfolioData from '../../../userData';
 
 function DetailsSection({itemVariants }) {
   const [displayText, setDisplayText] = useState('');
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
   
-  const phrases = [
-    'Web Developer',
-    'Backend Engineer',
-    'Knowledge Enthusiast',
-    'Curiosity-Driven Innovator',
-    'Lifelong Learner',
-];
 
 
   useEffect(() => {
     const typeText = () => {
-      const currentPhrase = phrases[currentPhraseIndex];
+      const currentPhrase = portfolioData.personalInfo.roles[currentPhraseIndex];
       if (displayText.length < currentPhrase.length) {
         setDisplayText(currentPhrase.slice(0, displayText.length + 1));
       } else {
         setTimeout(() => {
           setDisplayText('');
-          setCurrentPhraseIndex((prev) => (prev + 1) % phrases.length);
+          setCurrentPhraseIndex((prev) => (prev + 1) % portfolioData.personalInfo.roles.length);
         }, 2000);
       }
     };
