@@ -1,3 +1,9 @@
+import primeCv from './src/assets/primeCv.png'
+import streamingSite from './src/assets/streamingSite.png'
+import brainBattle from './src/assets/brainbattle.png'
+import weatherApp from './src/assets/weatherApp.png'
+import contactManager from './src/assets/contactManager.png'
+import choiceHub from './src/assets/choicehub.png'
 
 
 const portfolioData = {
@@ -49,7 +55,7 @@ const portfolioData = {
       {
         "title": "PRIME CV",
         "description": "A modern, responsive resume builder website built with Next.js and styled using Tailwind CSS.",
-        "image": "/src/assets/primeCv.png",
+        "image": primeCv,
         "technologies": ["Next.js", "Tailwind CSS", "MongoDB", "nextauth"],
         "liveLink": "https://primecv.vercel.app/",
         "githubLink": "https://github.com/Aayush0966/CV-Builder",
@@ -64,7 +70,7 @@ const portfolioData = {
       {
         "title": "Streaming Site",
         "description": "Modern, responsive movie and TV watching website frontend built with React and styled using Tailwind CSS.",
-        "image": "/src/assets/streamingSite.png",
+        "image": streamingSite,
         "technologies": ["React", "Tailwind CSS", "Vite"],
         "liveLink": "https://streamingwebsite.netlify.app/",
         "githubLink": "https://github.com/Aayush0966/Streaming-Site-Frontend",
@@ -78,7 +84,7 @@ const portfolioData = {
       {
           "title": "Brain Battle",
           "description": "Brain Battle is an AI-powered quiz application designed to generate dynamic and engaging quizzes across various topics instantly. It provides a seamless user experience with smart question generation and a sleek UI.",
-          "image": "/src/assets/brainbattle.png",
+          "image": brainBattle,
           "technologies": ["Next.js", "React", "Prisma", "PostgreSQL"],
           "liveLink": "https://brainbattle.vercel.app/",
           "githubLink": "https://github.com/Aayush0966/Brain-Battle",
@@ -92,7 +98,7 @@ const portfolioData = {
       {
         "title": "Weather Dashboard 🌧️",
         "description": "Welcome to the Weather Dashboard! This application provides comprehensive weather data.",
-        "image": "/src/assets/weatherApp.png",
+        "image": weatherApp,
         "technologies": ["React", "Tailwind CSS", "Vite"],
         "liveLink": "https://aayush0966.github.io/React-Weather-Dashboard/",
         "githubLink": "https://github.com/Aayush0966/React-Weather-Dashboard",
@@ -106,7 +112,7 @@ const portfolioData = {
       {
         "title": "Contact Manager Dashboard 📇",
         "description": "A full-stack web application for efficient contact management, featuring a sleek React frontend and a powerful Node.js backend.",
-        "image": "/src/assets/contactManager.png",
+        "image": contactManager,
         "technologies": ["React", "Node.js", "MongoDB", "JWT", "Tailwind CSS", "Vite"],
         "liveLink": "https://contactnest.netlify.app/",
         "githubLink": "https://github.com/Aayush0966/Contact-Manager-Dashboard",
@@ -120,7 +126,7 @@ const portfolioData = {
       {
         "title": "Choice Hub",
         "description": "A web application for making decisions easier by providing a platform for users to create and share polls.",
-        "image": "/src/assets/choicehub.png",
+        "image": choiceHub,
         "technologies": ["Next.js", "firebase", "Tailwind CSS"],
         "liveLink": "https://choicehub.vercel.app/",
         "githubLink": "https://github.com/Aayush0966/choice-hub",
