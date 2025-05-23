@@ -4,6 +4,7 @@ import brainBattle from './src/assets/brainbattle.png'
 import weatherApp from './src/assets/weatherApp.png'
 import contactManager from './src/assets/contactManager.png'
 import choiceHub from './src/assets/choicehub.png'
+import plymandu from './src/assets/plymandu.png'
 
 
 const portfolioData = {
@@ -135,6 +136,21 @@ const portfolioData = {
           "Create and share polls with friends and family",
           "Vote on polls and see real-time results",
           "Ensures smooth user experience"
+        ]
+      },
+      {
+        "title": "Plymandu",
+        "description": "A professional business website for Plymandu Trade Concern, a Kathmandu-based supplier of premium plywood and hardware products. The site showcases their product range, services, and company information with a modern, responsive design.",
+        "image": plymandu,
+        "technologies": ["React", "Vite", "Tailwind CSS"],
+        "liveLink": "https://plymandu.com.np",
+        "githubLink": "https://github.com/Aayush0966/plymandu-website",
+        "category": "Frontend",
+        "features": [
+          "Professional business website design",
+          "Product showcase for plywood and hardware",
+          "Contact information and location details",
+          "Responsive design for all devices"
         ]
       }
     ],
