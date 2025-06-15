@@ -12,7 +12,7 @@ const portfolioData = {
       "name": "Aayush",
       "fullName": "Aayush Budhathoki",
       "title": "Web Developer",
-      "email": "aayushx699@gmail.com",
+      "email": "dev@aayushbudhathoki.com.np",
       "phone": "",
       "location": "Itahari, Nepal",
       "roles": [
